@@ -1,0 +1,13 @@
+[
+  {
+    "id": "mm301a44ijdrs",
+    "name": "테스트 사용자",
+    "phone": "010-1234-5678",
+    "date": "2026-03-15",
+    "time": "14:00",
+    "product": "hallux-insole",
+    "message": "",
+    "createdAt": "2026-02-26T05:04:39.796Z",
+    "status": "pending"
+  }
+]

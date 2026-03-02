@@ -1,0 +1,171 @@
+/* 오시는 길 페이지 */
+
+.directions-hero {
+    position: relative;
+    min-height: 35vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.directions-hero__bg {
+    position: absolute;
+    inset: 0;
+}
+
+.directions-hero__gradient {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, #E0F7FA 0%, #B2DFDB 50%, #E8FFF5 100%);
+}
+
+.directions-hero__content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: var(--space-5xl) 0 var(--space-3xl);
+    width: 100%;
+}
+
+.directions-hero__title {
+    font-size: var(--font-size-5xl);
+    font-weight: 900;
+    color: var(--color-primary);
+    margin-bottom: var(--space-md);
+    letter-spacing: -0.03em;
+}
+
+.directions-hero__subtitle {
+    font-size: var(--font-size-lg);
+    color: var(--color-text-light);
+    max-width: 480px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+
+/* 지도 섹션 */
+.directions-map {
+    background: var(--color-section-white);
+}
+
+.directions-map__grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: var(--space-3xl);
+    align-items: start;
+}
+
+.directions-map__embed {
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+}
+
+.directions-map__embed iframe {
+    display: block;
+}
+
+/* 정보 카드 */
+.directions-map__info {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+}
+
+.directions-info__card {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-md);
+    background: white;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-lg);
+    transition: all var(--transition-base);
+}
+
+.directions-info__card:hover {
+    border-color: var(--color-accent);
+    box-shadow: var(--shadow-md);
+}
+
+.directions-info__icon {
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--color-accent), #56E0C0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.directions-info__card h3 {
+    font-size: var(--font-size-base);
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-bottom: var(--space-xs);
+}
+
+.directions-info__card p {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-light);
+    line-height: 1.6;
+}
+
+.directions-info__highlight {
+    background: linear-gradient(135deg, rgba(78, 205, 196, 0.08), rgba(86, 224, 192, 0.08));
+    border: 1px solid rgba(78, 205, 196, 0.2);
+    border-radius: var(--radius-lg);
+    padding: var(--space-lg);
+}
+
+.directions-info__highlight p {
+    font-size: var(--font-size-base);
+    color: var(--color-text);
+    line-height: 1.7;
+    margin-bottom: var(--space-xs);
+}
+
+.directions-info__highlight p:last-child {
+    margin-bottom: 0;
+    color: var(--color-text-light);
+    font-size: var(--font-size-sm);
+}
+
+/* 반응형 */
+@media (max-width: 768px) {
+    .directions-hero {
+        min-height: auto;
+        padding-top: 70px;
+    }
+
+    .directions-hero__content {
+        padding: var(--space-2xl) 0 var(--space-xl);
+    }
+
+    .directions-hero__title {
+        font-size: var(--font-size-2xl);
+    }
+
+    .directions-hero__subtitle {
+        font-size: var(--font-size-sm);
+        padding: 0 var(--space-sm);
+    }
+
+    .directions-map__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .directions-map__embed iframe {
+        height: 300px;
+    }
+
+    .directions-info__card {
+        padding: var(--space-md);
+    }
+
+    .directions-info__highlight {
+        padding: var(--space-md);
+    }
+}

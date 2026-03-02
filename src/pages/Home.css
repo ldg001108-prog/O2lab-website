@@ -1,0 +1,40 @@
+/* Products 섹션 — 화이트 배경으로 섹션 구분 */
+.products {
+    background: var(--color-section-white);
+}
+
+.products__header {
+    text-align: center;
+    margin-bottom: var(--space-3xl);
+}
+
+.products__label {
+    display: inline-block;
+    font-size: var(--font-size-xs);
+    font-weight: 700;
+    color: var(--color-accent);
+    letter-spacing: 0.15em;
+    margin-bottom: var(--space-md);
+}
+
+.products__header .section-subtitle {
+    margin: 0 auto;
+}
+
+.products__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-xl);
+}
+
+@media (max-width: 992px) {
+    .products__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .products__grid {
+        grid-template-columns: 1fr;
+    }
+}
